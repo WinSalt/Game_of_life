@@ -12,8 +12,6 @@ public class Game_of_life extends JPanel implements ActionListener{
         int x;
         int y;
 
-        //private boolean alive;
-
         Tile(int x, int y, boolean alive) {
             this.x = x;
             this.y = y;
@@ -29,8 +27,6 @@ public class Game_of_life extends JPanel implements ActionListener{
 
     Timer gameLoop;
 
-    //Tile GameTile;
-    //LinkedList<Tile> list_of_blocks = new LinkedList<Tile>();
     public Tile[][] list_of_blocks;
 
     Game_of_life(int boardWidth, int boardHeight) {
@@ -71,19 +67,6 @@ public class Game_of_life extends JPanel implements ActionListener{
 
         }
 
-
-        /*for (int i = 0; i < startBlocks; i++) {
-            list_of_blocks.add(new Tile(generator.nextInt(boardWidth / tileSize), generator.nextInt(boardHeight / tileSize), false));
-        }
-
-        for (int i = 0; i < startBlocks; i++) {
-            if (list_of_blocks.get(i).alive == false) {
-
-            } else {
-                list_of_blocks.add(new Tile(generator.nextInt(boardWidth / tileSize), generator.nextInt(boardHeight / tileSize), true));
-            }
-        }*/
-
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         draw_grid(g);
@@ -109,7 +92,6 @@ public class Game_of_life extends JPanel implements ActionListener{
                 else {
                     g.setColor(Color.blue);
                 }
-                //g.fillRect(list_of_blocks[i][j].x, list_of_blocks[i][j].y, tileSize, tileSize);
             }
         }
     }
